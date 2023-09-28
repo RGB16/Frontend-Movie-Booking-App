@@ -7,7 +7,11 @@ import axios from 'axios';
 import { Provider } from "react-redux";
 import { store } from './store';
 
-axios.defaults.baseURL ="https://api.render.com/deploy/srv-ckaj4s4g66mc7382vi90?key=Y0Cy2WSSVq8"||"http://localhost:5000" ;//"http://localhost:5000";
+axios.defaults.baseURL =
+  process.env.NODE_ENV === 'production'
+    ? "https://api.render.com/deploy/srv-ckaj4s4g66mc7382vi90?key=Y0Cy2WSSVq8?"
+    : "http://localhost:5000";
+ ;//"http://localhost:5000";
 
 ReactDOM.render(
   <React.StrictMode>
