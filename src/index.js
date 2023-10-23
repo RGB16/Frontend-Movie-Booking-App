@@ -9,7 +9,7 @@ import { store } from './store';
 
 axios.defaults.baseURL =
   process.env.NODE_ENV === 'production'
-    ? "https://api.render.com/deploy/srv-ckaj4s4g66mc7382vi90?key=Y0Cy2WSSVq8?"
+    ? "https://main.df5ky7ooo8n35.amplifyapp.com/"
     : "http://localhost:5000";
  ;//"http://localhost:5000";
 
